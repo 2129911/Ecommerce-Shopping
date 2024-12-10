@@ -8,6 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom"; 
 import { addToCart } from "../redux/cartProduct";
 import video from '../../assets/Video/one.mp4'
+import LoginPage from "../LoginPage";
 
 
 const Home = () => {
@@ -61,6 +62,7 @@ const Home = () => {
     autoPlay 
     loop 
     muted
+    playsinline
   >
     <source src={video} type="video/mp4" />
     Your browser does not support the video tag.
@@ -91,7 +93,7 @@ const Home = () => {
 
       <InfoSection />
       <CategorieSection />
-
+      <LoginPage/>
       {/* Product Section */}
       <div className="mt-10">
         <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">

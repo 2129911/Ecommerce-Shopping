@@ -17,6 +17,7 @@ import Checkout from "./Component/Checkout"
 import DebitCardPayment from "./Component/DebitCardPayment"
 import CreditCardPayment from "./Component/CreditCardPayment"
 import OrderSummary from "./Component/OrderSummary"
+import LoginPage from "./Component/LoginPage"
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
     <Route path="/cart" element={<Cart />} />
     <Route path="/mencollection" element={<MenCollections />} />
     <Route path="/womencollection" element={<WomenCollection />} />
+    <Route path="/loginpage" element={<LoginPage />} />
 
     <Route path="/shop" element={<Shop/>}>    </Route>
     <Route path="/contact" element={<Contact/>}>    </Route>

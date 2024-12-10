@@ -44,13 +44,14 @@ const Navbar = () => {
     </span>
   )}
 </Link>
-
+<Link tp='loginpage'>
             <button className="hidden md:block text-sm font-semibold text-white hover:text-red-500">
               Login | Register
             </button>
             <button className="block md:hidden">
               <FaUser className="text-lg hover:text-red-500 transition duration-300" />
             </button>
+            </Link>
           </div>
         </div>
 
