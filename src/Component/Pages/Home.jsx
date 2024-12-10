@@ -57,8 +57,7 @@ const Home = () => {
         {/* Hero Section */}
         
         <div className="flex-1 relative rounded-lg shadow-lg overflow-hidden">
-  <video 
-    className="absolute inset-0 w-full h-full object-cover" 
+  <video   className="absolute inset-0 w-full h-full object-cover" 
     autoPlay 
     loop 
     muted
