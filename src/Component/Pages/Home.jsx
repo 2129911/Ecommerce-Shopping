@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from "react";
+import React, { useEffect } from "react";
 import { Categories, mockData } from "../../assets/MockData";
 import Heroimage from "../../assets/Images/Hero-Image.png";
 import InfoSection from "../InfoSection";
@@ -8,7 +8,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom"; 
 import { addToCart } from "../redux/cartProduct";
 import video from '../../assets/Video/one.mp4'
-import LoginPage from "../LoginPage";
 
 
 const Home = () => {
@@ -28,22 +27,7 @@ const Home = () => {
   const handleCategoryClick = (category) => {
     navigate(`/${category.replace(/\s+/g, "-").toLowerCase()}`);
   };
-  const [isIphone, setIsIphone] = useState(false);
-
-  useEffect(() => {
-    const userAgent = navigator.userAgent.toLowerCase();
-    if (/iphone|ipad|ipod/.test(userAgent)) {
-      setIsIphone(true);
-    }
-  }, []);
-
-  const handleVideoClick = () => {
-    if (isIphone) {
-      // Show popup for iPhone users
-      alert("Playing video in a popup on iPhone.");
-      // You can enhance this to display a modal with the video
-    }
-  };
+  
   
 
   return (
@@ -72,13 +56,12 @@ const Home = () => {
         {/* Hero Section */}
         
         <div className="flex-1 relative rounded-lg shadow-lg overflow-hidden">
-        <video
-            className={`absolute inset-0 w-full h-full object-cover ${isIphone ? 'hidden' : ''}`}
-            autoPlay
-            loop
-            muted
-            playsInline
-          >
+  <video 
+    className="absolute inset-0 w-full h-full object-cover" 
+    autoPlay 
+    loop 
+    muted
+  >
     <source src={video} type="video/mp4" />
     Your browser does not support the video tag.
   </video>
@@ -108,7 +91,7 @@ const Home = () => {
 
       <InfoSection />
       <CategorieSection />
-      <LoginPage/>
+
       {/* Product Section */}
       <div className="mt-10">
         <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">
