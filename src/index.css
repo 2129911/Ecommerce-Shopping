@@ -14,3 +14,10 @@
 .animate-fadeIn {
   animation: fadeIn 1s ease-in-out;
 }
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+video::-moz-media-controls {
+  display: none !important;
+}
