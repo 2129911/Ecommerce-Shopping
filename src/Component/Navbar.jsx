@@ -44,7 +44,7 @@ const Navbar = () => {
     </span>
   )}
 </Link>
-<Link tp='loginpage'>
+<Link to='loginpage'>
             <button className="hidden md:block text-sm font-semibold text-white hover:text-red-500">
               Login | Register
             </button>

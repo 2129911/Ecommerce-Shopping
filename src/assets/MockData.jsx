@@ -106,12 +106,29 @@ import fem16 from './Images/womenCollection/fem16.webp'
 
 
 
-export const  Categories = [
-  "Electronics",
-  "Fashion",
-  "HomeKitchen",
-  "Beauty",
-  "Sports"]
+export const Categories = [
+  {
+    name: 'Electronics',
+    route: '/electronics',
+  },
+  {
+    name: 'Fashion',
+    route: '/fashion',
+  },
+  {
+    name: 'Home & Kitchen',
+    route: '/home-kitchen',
+  },
+  {
+    name: 'Beauty',
+    route: '/beauty',
+  },
+  {
+    name: 'Sports',
+    route: '/sports',
+  },
+];
+
 
 export const fasionData=[{
 img:menfash,

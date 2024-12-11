@@ -14,3 +14,22 @@
 .animate-fadeIn {
   animation: fadeIn 1s ease-in-out;
 }
+
+.loader {
+  margin: auto;
+  border: 20px solid #EAF0F6;
+  border-radius: 50%;
+  border-top: 20px solid #FF7A59;
+  width: 200px;
+  height: 200px;
+  animation: spinner 4s linear infinite;
+}
+
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.borders-text{
+  -webkit-text-stroke: 2px black;
+  color: white;
+}

@@ -10,12 +10,11 @@ const LoginPage = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
       <div className="w-full max-w-md bg-white shadow-lg rounded-lg overflow-hidden">
-        {/* Slider */}
         <div className="flex">
           <button
             onClick={toggleForm}
             className={`w-1/2 py-2 text-center font-semibold transition-colors ${
-              isLogin ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-700"
+              isLogin ? "bg-red-500 text-white" : "bg-gray-200 text-gray-700"
             }`}
           >
             Login
@@ -23,7 +22,7 @@ const LoginPage = () => {
           <button
             onClick={toggleForm}
             className={`w-1/2 py-2 text-center font-semibold transition-colors ${
-              !isLogin ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-700"
+              !isLogin ? "bg-red-500 text-white" : "bg-gray-200 text-gray-700"
             }`}
           >
             Register
@@ -47,7 +46,7 @@ const LoginPage = () => {
                   <input
                     type="email"
                     id="loginEmail"
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -61,13 +60,13 @@ const LoginPage = () => {
                   <input
                     type="password"
                     id="loginPassword"
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
                     placeholder="Enter your password"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors"
+                  className="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition-colors"
                 >
                   Login
                 </button>
@@ -88,7 +87,7 @@ const LoginPage = () => {
                   <input
                     type="text"
                     id="registerName"
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
                     placeholder="Enter your name"
                   />
                 </div>
@@ -102,7 +101,7 @@ const LoginPage = () => {
                   <input
                     type="email"
                     id="registerEmail"
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -116,13 +115,13 @@ const LoginPage = () => {
                   <input
                     type="password"
                     id="registerPassword"
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
                     placeholder="Enter your password"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors"
+                  className="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition-colors"
                 >
                   Register
                 </button>

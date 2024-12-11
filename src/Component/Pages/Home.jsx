@@ -5,9 +5,10 @@ import InfoSection from "../InfoSection";
 import CategorieSection from "../CategorieSection";
 import { setProduct } from "../redux/productSlice";
 import { useSelector, useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom"; 
+import { Link, useNavigate } from "react-router-dom"; 
 import { addToCart } from "../redux/cartProduct";
 import video from '../../assets/Video/one.mp4'
+
 
 
 const Home = () => {
@@ -25,9 +26,9 @@ const Home = () => {
   }, [dispatch]);
 
   const handleCategoryClick = (category) => {
-    navigate(`/${category.replace(/\s+/g, "-").toLowerCase()}`);
+    const formattedCategory = category.name.replace(/\s+/g, "-").toLowerCase(); // Assuming category has a 'name' property
+    navigate(`/${formattedCategory}`);
   };
-  
   
 
   return (
@@ -35,7 +36,7 @@ const Home = () => {
       {/* Main Container */}
       <div className="container mx-auto py-8 flex flex-col md:flex-row gap-6">
         {/* Categories Section */}
-        <div className="w-full md:w-3/12">
+        {/* <div className="w-full md:w-3/12">
           <div className="bg-red-600 text-white text-xs font-bold px-4 py-3 uppercase rounded-t-lg">
             Shop by Categories
           </div>
@@ -47,11 +48,28 @@ const Home = () => {
                 onClick={() => handleCategoryClick(category)} 
               >
                 <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-                <span>{category}</span>
+                <span>{category.name}</span>
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
+        <div className="w-full md:w-3/12">
+  <div className="bg-red-600 text-white text-xs font-bold px-4 py-3 uppercase rounded-t-lg">
+    Shop by Categories
+  </div>
+  <ul className="space-y-4 bg-gray-100 p-4 border rounded-b-lg">
+    {Categories.map((category, index) => (
+      <li
+        key={index}
+        className="cursor-pointer text-sm font-medium text-gray-700 flex items-center space-x-3 hover:bg-red-500 hover:text-white hover:shadow-lg p-2 rounded-md transition-transform transform hover:scale-105"
+        onClick={() => handleCategoryClick(category)} // Fixed: Properly handle navigation
+      >
+        <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+        <span>{category.name}</span>
+      </li>
+    ))}
+  </ul>
+</div>
 
         {/* Hero Section */}
         
@@ -90,15 +108,19 @@ const Home = () => {
       </div>
 
       <InfoSection />
-      <CategorieSection />
+      <CategorieSection />  
 
       {/* Product Section */}
+
       <div className="mt-10">
         <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">
           Featured Products
         </h1>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {product.product.slice(0, 4).map((item, index) => ( 
+                    <Link to={`/product/${item.id}`}>
+
             <div
               key={index}
               className="bg-white shadow-lg rounded-lg p-4 transition-transform transform hover:scale-105 hover:shadow-xl"
@@ -118,14 +140,16 @@ const Home = () => {
                 <p className="text-lg font-bold text-red-600 mt-2">
                   ${item.price}
                 </p>
-                <button                   onClick={(e) => handleClick(e, item)} 
+                <button onClick={(e) => handleClick(e, item)} 
  className="w-full bg-red-500 text-white py-2 mt-4 rounded-md hover:bg-red-600 transition">
                   Add to Cart
                 </button>
               </div>
             </div>
+          </Link>
           ))}
         </div>
+
 
         {/* View All Button */}
         <div className="flex justify-center mt-6">

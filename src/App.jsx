@@ -18,6 +18,7 @@ import DebitCardPayment from "./Component/DebitCardPayment"
 import CreditCardPayment from "./Component/CreditCardPayment"
 import OrderSummary from "./Component/OrderSummary"
 import LoginPage from "./Component/LoginPage"
+import ProductDetails from "./Component/ProductDetails"
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
     <Route path="/mencollection" element={<MenCollections />} />
     <Route path="/womencollection" element={<WomenCollection />} />
     <Route path="/loginpage" element={<LoginPage />} />
+    <Route path="/product/:id" element={<ProductDetails />} />
 
     <Route path="/shop" element={<Shop/>}>    </Route>
     <Route path="/contact" element={<Contact/>}>    </Route>
