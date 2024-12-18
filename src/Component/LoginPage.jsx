@@ -58,8 +58,7 @@ const LoginPage = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
       <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden grid grid-cols-1 md:grid-cols-2">
-        {/* Image Section */}
-        <div className="relative hidden md:block">
+        <div className="relative  md:block">
           <img src={svg} alt="Illustration" className="w-full h-full object-cover" />
         </div>
 

@@ -8,12 +8,12 @@ const Navbar = () => {
   console.log(product)
   return (
     <>
-      <nav className="bg-gray-900  text-white   shadow-md">
+      <nav className="bg-gray-900    shadow-md">
         
         <div className="container mx-auto px-4 md:px-16 lg:px-24 py-4 flex justify-between items-center">
           {/* Logo Section */}
-          <div className="flex items-center space-x-2 text-lg font-bold">
-            <FaStore className="text-red-500 text-2xl" />
+          <div className="flex items-center  space-x-2 text-lg font-bold">
+            <FaStore className="text-red-500  text-2xl" />
             <Link
               to="/"
               className="text-red-500 hover:text-red-700 transition duration-300"
@@ -37,7 +37,7 @@ const Navbar = () => {
           {/* Icons and Buttons */}
           <div className="flex items-center space-x-4">
           <Link to="/cart" className="relative">
-  <FaShoppingCart className="text-lg hover:text-red-500 transition duration-300" />
+  <FaShoppingCart className="text-lg text-white hover:text-red-500 transition duration-300" />
   {product.length > 0 && (
     <span className="absolute -top-3 -right-4 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
       {product.length}
