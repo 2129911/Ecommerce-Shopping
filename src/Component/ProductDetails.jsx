@@ -1,124 +1,107 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-import {  removeFromCart,
-  increaseQuantity,
-  decreaseQuantity,
-} from "./redux/cartProduct";
+import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
 import { GoArrowLeft } from "react-icons/go";
-import { useNavigate } from "react-router-dom";
-import { addToCart } from "./redux/cartProduct";
+import {
+  addToCart,
+  decreaseQuantity,
+  increaseQuantity,
+} from "./redux/cartProduct";
 
 const ProductDetails = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
-  const handleClick = (e, product) => {
-    e.stopPropagation();
-    e.preventDefault();
-    dispatch(addToCart(product));
-    alert(`${product.name} added to cart successfully!`);
-  };
-
   const { category } = useParams();
   const cart = useSelector((state) => state.product.product);
-  console.log(cart);
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
     const selectedProduct = cart.find((product) => product.category === category);
-    console.log(selectedProduct)
     setProduct(selectedProduct);
   }, [category, cart]);
 
   if (!product) {
-    return (<>
-       <button  className="" onClick={() => navigate(-1)}>
-                {" "}
-                <div className=" w-full bg-red-600 flex text-white items-center px-6 py-2 rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-300">
-                  <GoArrowLeft></GoArrowLeft> Go-back
-                </div>
-              </button>
-      <div className="flex justify-center items-center h-screen">
-        <div className="text-2xl font-semibold loader"></div>
-      </div></>
+    return (
+      <>
+        <button onClick={() => navigate(-1)} className="absolute top-4 left-4">
+          <div className="flex items-center bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+            <GoArrowLeft className="mr-2" /> Go Back
+          </div>
+        </button>
+        <div className="flex justify-center items-center h-screen">
+          <div className="loader text-2xl font-semibold">Loading...</div>
+        </div>
+      </>
     );
   }
 
   return (
-    <>
-      <div
-        style={{ backgroundImage: `url(${product.image})` }}
-        className="min-h-screen  bg-cover bg-center opacity-70 z-0  flex justify-center items-center  p-4"
+    <div
+    style={{ backgroundImage: `url(${product.image})` }}
+    className="min-h-screen  bg-cover bg-center opacity-100 z-0  flex justify-center items-center  p-4"
+  >      <motion.div
+        className="max-w-5xl w-full bg-white rounded-lg shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-2 gap-4"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }}
       >
-        <motion.div
-          className="max-w-4xl w-full bg-white rounded-lg shadow-lg overflow-hidden p-6"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+        <motion.img
+          src={product.image}
+          alt={product.name}
+          className="w-full h-96 object-cover rounded-t-lg md:rounded-none md:rounded-l-lg"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-        >
-          {" "}
-          <div className="flex">
-            <motion.img
-              src={product.image}
-              alt={product.name}
-              className="w-2/5
-           h-full  object-contain mb-2"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            />
-            <div className="text-center w-full">
-              <h1 className="text-8xl font-bold text-gray-800 borders-text  w-full mb-4 ">
-                {product.name}
-              </h1>
-              <p className="text-xl  text-gray-600  mb-4">
-                {product.description}
-              </p>
-              <p className="text-2xl font-semibold text-red-600 mb-4">
-                ${product.price}
-              </p>
-              <div className="flex items-center w-full justify-center  mb-5 space-x-2">
-                <button
-                  onClick={() => dispatch(decreaseQuantity(product.id))}
-                  className="bg-gray-200 px-3 py-1 rounded-l-lg hover:bg-gray-300"
-                >
-                  -
-                </button>
-                <p className="px-4 py-1 bg-gray-100 rounded">
-                  { 1 ||product.quantity }{
-                    console.log(product.quantity)
-                  }
-                </p>
-                <button
-                  onClick={() => dispatch(increaseQuantity(product.id))}
-                  className="bg-gray-200 px-3 py-1 rounded-r-lg hover:bg-gray-300"
-                >
-                  +
-                </button>
-              </div>
-              <motion.button
-                onClick={(e) => handleClick(e, item)}
-                className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 my-1 focus:outline-none focus:ring-2 focus:ring-red-300 w-3/4"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
+        />
+
+        <div className="p-6 flex flex-col justify-between">
+          <div>
+            <h1 className="text-4xl font-bold text-gray-800 mb-4">{product.name}</h1>
+            <p className="text-gray-600 mb-4">{product.description}</p>
+            <p className="text-2xl font-semibold text-red-600">${product.price}</p>
+          </div>
+
+          <div className="mt-6">
+            <div className="flex items-center justify-center mb-6 space-x-2">
+              <button
+                onClick={() => dispatch(decreaseQuantity(product.id))}
+                className="bg-gray-200 px-4 py-2 rounded-l hover:bg-gray-300"
               >
-                Add to Cart
-              </motion.button>
-              <br></br>
-              <button onClick={() => navigate(-1)}>
-                {" "}
-                <div className=" w-full bg-red-600  flex text-white items-center px-6 py-2 rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-300">
-                  <GoArrowLeft></GoArrowLeft> Go-back
-                </div>
+                -
+              </button>
+              <span className="px-4 py-2 bg-gray-100 rounded">{product.quantity || 1}</span>
+              <button
+                onClick={() => dispatch(increaseQuantity(product.id))}
+                className="bg-gray-200 px-4 py-2 rounded-r hover:bg-gray-300"
+              >
+                +
               </button>
             </div>
+
+            <motion.button
+              onClick={(e) => {
+                e.preventDefault();
+                dispatch(addToCart(product));
+                alert(`${product.name} added to cart successfully!`);
+              }}
+              className="w-full bg-red-600 text-white py-2 rounded hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Add to Cart
+            </motion.button>
           </div>
-        </motion.div>
-      </div>
-    </>
+
+          <button onClick={() => navigate(-1)} className="mt-4">
+            <div className="w-full bg-gray-800 text-white py-2 flex items-center justify-center rounded hover:bg-gray-900">
+              <GoArrowLeft className="mr-2" /> Go Back
+            </div>
+          </button>
+        </div>
+      </motion.div>
+    </div>
   );
 };
 
