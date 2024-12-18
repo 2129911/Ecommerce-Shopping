@@ -2,6 +2,7 @@ import React from "react";
 import img1 from '../../assets/Images/me.png'
 import img2 from '../../assets/Images/mukul.jpg'
 import img3 from '../../assets/Images/uditSir.png'
+import Chatbox from "../../Chatbox/Chatbox";
 
 const About = () => {
   return (
@@ -13,6 +14,7 @@ const About = () => {
             img1,
         }}
       ></div>
+      <Chatbox />
 
       <div className="relative z-10 container mx-auto px-8 py-20 text-center space-y-10">
         <h1 className="text-4xl md:text-6xl font-extrabold tracking-wide uppercase animate-fadeInDown">

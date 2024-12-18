@@ -1,4 +1,5 @@
 import React from "react";
+import Chatbox from "../../Chatbox/Chatbox";
 
 const Contact = () => {
   return (
@@ -45,6 +46,8 @@ const Contact = () => {
               />
             </div>
           </div>
+          <Chatbox />
+
           <div>
             <label
               htmlFor="message"

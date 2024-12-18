@@ -4,6 +4,7 @@ import { setProduct } from "../redux/productSlice";
 import { addToCart } from "../redux/cartProduct";
 import { beautyProducts } from "../../assets/MockData";
 import video from '../../assets/Video/beauty.mp4'
+import Chatbox from "../../Chatbox/Chatbox";
 
 const Electronics = () => {
   const dispatch = useDispatch();
@@ -46,7 +47,8 @@ const Electronics = () => {
     </p>
    
   </div>
-</div>
+</div>      <Chatbox />
+
 
       <div className="grid grid-cols-1 mt-5 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {product.product.map((item, index) => (

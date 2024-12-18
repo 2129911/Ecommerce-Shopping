@@ -1,133 +1,133 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { supabase } from "../supabase/supabaseClient";
+import svg from "../assets/svg/svg.png";
 
 const LoginPage = () => {
+  const [user, setUser] = useState({ email: "", password: "" });
   const [isLogin, setIsLogin] = useState(true);
+  const [error, setError] = useState(null);
+
+  const navigate = useNavigate();
 
   const toggleForm = () => {
     setIsLogin(!isLogin);
+    setError(null);
   };
+
+  function handleChange(e) {
+    const { id, value } = e.target;
+
+    setUser((prevData) => ({
+      ...prevData,
+      [id]: value,
+    }));
+  }
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setError(null);
+
+    const { email, password } = user;
+
+    try {
+      if (isLogin) {
+        const { data, error } = await supabase.auth.signInWithPassword({
+          email,
+          password,
+        });
+        if (error) throw error;
+        console.log(data);
+        navigate("/home");
+
+        alert("Login Successful!");
+      } else {
+        const { error } = await supabase.auth.signUp({
+          email,
+          password,
+        });
+
+        if (error) throw error;
+        alert("Registration Successful! Please check your email.");
+      }
+    } catch (err) {
+      setError(err.message || "Something went wrong!");
+    }
+  }
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="w-full max-w-md bg-white shadow-lg rounded-lg overflow-hidden">
-        <div className="flex">
-          <button
-            onClick={toggleForm}
-            className={`w-1/2 py-2 text-center font-semibold transition-colors ${
-              isLogin ? "bg-red-500 text-white" : "bg-gray-200 text-gray-700"
-            }`}
-          >
-            Login
-          </button>
-          <button
-            onClick={toggleForm}
-            className={`w-1/2 py-2 text-center font-semibold transition-colors ${
-              !isLogin ? "bg-red-500 text-white" : "bg-gray-200 text-gray-700"
-            }`}
-          >
-            Register
-          </button>
+      <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden grid grid-cols-1 md:grid-cols-2">
+        {/* Image Section */}
+        <div className="relative hidden md:block">
+          <img src={svg} alt="Illustration" className="w-full h-full object-cover" />
         </div>
 
-        {/* Form */}
-        <div className="p-6">
-          {isLogin ? (
-            // Login Form
+        {/* Form Section */}
+        <div className="w-full p-6">
+          <div className="flex mb-6">
+            <button
+              onClick={toggleForm}
+              className={`w-1/2 py-2 text-center font-semibold transition-colors ${
+                isLogin ? "bg-red-500 text-white" : "bg-gray-200 text-gray-700"
+              }`}
+            >
+              Login
+            </button>
+            <button
+              onClick={toggleForm}
+              className={`w-1/2 py-2 text-center font-semibold transition-colors ${
+                !isLogin ? "bg-red-500 text-white" : "bg-gray-200 text-gray-700"
+              }`}
+            >
+              Register
+            </button>
+          </div>
+
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+            {isLogin ? "Login" : "Register"}
+          </h2>
+
+          {error && <p className="text-red-500 mb-4">{error}</p>}
+
+          <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-6">Login</h2>
-              <form>
-                <div className="mb-4">
-                  <label
-                    className="block text-gray-600 mb-2"
-                    htmlFor="loginEmail"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="loginEmail"
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-                    placeholder="Enter your email"
-                  />
-                </div>
-                <div className="mb-4">
-                  <label
-                    className="block text-gray-600 mb-2"
-                    htmlFor="loginPassword"
-                  >
-                    Password
-                  </label>
-                  <input
-                    type="password"
-                    id="loginPassword"
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-                    placeholder="Enter your password"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition-colors"
-                >
-                  Login
-                </button>
-              </form>
+              <label className="block text-gray-600 mb-2" htmlFor="email">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                value={user.email}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                placeholder="Enter your email"
+                required
+              />
             </div>
-          ) : (
-            // Register Form
+
             <div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-6">Register</h2>
-              <form>
-                <div className="mb-4">
-                  <label
-                    className="block text-gray-600 mb-2"
-                    htmlFor="registerName"
-                  >
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="registerName"
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-                    placeholder="Enter your name"
-                  />
-                </div>
-                <div className="mb-4">
-                  <label
-                    className="block text-gray-600 mb-2"
-                    htmlFor="registerEmail"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="registerEmail"
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-                    placeholder="Enter your email"
-                  />
-                </div>
-                <div className="mb-4">
-                  <label
-                    className="block text-gray-600 mb-2"
-                    htmlFor="registerPassword"
-                  >
-                    Password
-                  </label>
-                  <input
-                    type="password"
-                    id="registerPassword"
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-                    placeholder="Enter your password"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition-colors"
-                >
-                  Register
-                </button>
-              </form>
+              <label className="block text-gray-600 mb-2" htmlFor="password">
+                Password
+              </label>
+              <input
+                type="password"
+                id="password"
+                value={user.password}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                placeholder="Enter your password"
+                required
+              />
             </div>
-          )}
+
+            <button
+              type="submit"
+              className="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition-colors"
+            >
+              {isLogin ? "Login" : "Register"}
+            </button>
+          </form>
         </div>
       </div>
     </div>

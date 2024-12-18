@@ -6,6 +6,7 @@ import { fasionData } from "../../assets/MockData";
 import video from '../../assets/Video/five.mp4'
 import { useNavigate } from "react-router";
 import MenCollections from "./MenCollection";
+import Chatbox from "../../Chatbox/Chatbox";
 
 
 const Electronics = () => {
@@ -53,6 +54,7 @@ const Electronics = () => {
    
   </div>
 </div>
+<Chatbox />
 
       <div className="grid grid-cols-1 mt-5 md:grid-cols-2 m-auto lg:grid-cols-2 gap-6">
         {product.product.map((item, index) => (

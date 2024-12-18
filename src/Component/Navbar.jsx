@@ -44,20 +44,13 @@ const Navbar = () => {
     </span>
   )}
 </Link>
-<Link to='loginpage'>
-            <button className="hidden md:block text-sm font-semibold text-white hover:text-red-500">
-              Login | Register
-            </button>
-            <button className="block md:hidden">
-              <FaUser className="text-lg hover:text-red-500 transition duration-300" />
-            </button>
-            </Link>
+
           </div>
         </div>
 
         {/* Links Section */}
         <div className="flex items-center justify-center  space-x-10 py-4 text-sm font-bold text-white ">
-          <Link to="/" className="  hover:text-red-500">
+          <Link to="/home" className="  hover:text-red-500">
             Home
           </Link>
           <Link to="/shop" className=" hover:text-red-500">

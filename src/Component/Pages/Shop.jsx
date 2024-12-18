@@ -4,6 +4,8 @@ import { setProduct } from "../redux/productSlice";
 import { addToCart } from "../redux/cartProduct";
 import { useSelector, useDispatch } from "react-redux";
 import Electronics from "./HomeKitchen";
+import { Link } from "react-router-dom";
+import Chatbox from "../../Chatbox/Chatbox";
 
 const Shop = () => {
   const dispatch = useDispatch();
@@ -17,20 +19,23 @@ const Shop = () => {
   };
 
   useEffect(() => {
-    const combinedData = [...mockElec, ...mockData, ...fasionData, ...womencollection, ...mencollection ,...Categories,...beautyProducts,...homekitchen];
+    const combinedData = [...mockElec, ...mockData, ...fasionData, ...womencollection, ...mencollection ,...beautyProducts,...homekitchen];
     dispatch(setProduct(combinedData));
   }, [dispatch]);
 
   return (
-    <>  
+    <>         <Chatbox />
+
       <div className="mt-10 mb-10">
         <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">
         WELCOME THE PRODUCT WORLD
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {product.product.map((item) => ( 
+          {product.product.map((item) => (
+           <Link to={`/product/${item.category}`}>
+ 
             <div
-              key={item.id} 
+              key={item.category} 
               className="bg-white shadow-lg rounded-lg p-4 transition-transform transform hover:scale-105 hover:shadow-xl"
             >
               <img
@@ -56,6 +61,7 @@ const Shop = () => {
                 </button>
               </div>
             </div>
+            </Link>
           ))}
         </div>
       </div>
