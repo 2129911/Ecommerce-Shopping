@@ -77,6 +77,7 @@ const Shop = () => {
           alert(`${product.name} added to cart successfully!`);
         }
       } else {
+        // Cart does not exist, create a new cart with the product
         const newProducts = [
           {
             category: product.category,
@@ -107,6 +108,84 @@ const Shop = () => {
     }
   };
   
+  // const handleClick = async (product) => {
+  //   try {
+  //     const { data: sessionData, error: sessionError } = await supabase.auth.getSession();
+
+  //     if (sessionError) {
+  //       console.error("Error fetching session:", sessionError.message);
+  //       alert("Unable to fetch session. Please log in again.");
+  //       return;
+  //     }
+
+  //     const userId = sessionData?.session?.user?.id;
+  //     if (!userId) {
+  //       alert("User not logged in.");
+  //       return;
+  //     }
+
+  //     const { data: existingCart, error: fetchError } = await supabase
+  //       .from("cart_products")
+  //       .select("id, products")
+  //       .eq("user", userId)
+  //       .single();
+
+  //     if (fetchError && fetchError.code !== "PGRST116") {
+  //       console.error("Error fetching cart:", fetchError);
+  //       alert("Error fetching cart details. Please try again.");
+  //       return;
+  //     }
+
+  //     const productToAdd = {
+  //       category: product.category,
+  //       image: product.image,
+  //       name: product.name,
+  //       description: product.description,
+  //       price: product.price,
+  //       quantity: 1,
+  //     };
+
+  //     if (existingCart) {
+  //       const productsArray = existingCart.products || [];
+
+  //       const productIndex = productsArray.findIndex(
+  //         (item) => item.name === product.name
+  //       );
+
+  //       if (productIndex !== -1) {
+  //         productsArray[productIndex].quantity += 1;
+  //       } else {
+  //         productsArray.push(productToAdd);
+  //       }
+
+  //       const { error: updateError } = await supabase
+  //         .from("cart_products")
+  //         .update({ products: productsArray })
+  //         .eq("id", existingCart.id);
+
+  //       if (updateError) {
+  //         console.error("Error updating cart:", updateError);
+  //         alert(`Error updating cart: ${updateError.message}`);
+  //       } else {
+  //         alert(`${product.name} added to cart successfully!`);
+  //       }
+  //     } else {
+  //       const { error: insertError } = await supabase
+  //         .from("cart_products")
+  //         .insert([{ user: userId, products: [productToAdd] }]);
+
+  //       if (insertError) {
+  //         console.error("Error adding product to cart:", insertError);
+  //         alert(`Error adding product to cart: ${insertError.message}`);
+  //       } else {
+  //         alert(`${product.name} added to cart successfully!`);
+  //       }
+  //     }
+  //   } catch (err) {
+  //     console.error("Unexpected error:", err);
+  //     alert("Something went wrong. Please try again.");
+  //   }
+  // };
 
   useEffect(() => {
     const combinedData = [
@@ -132,7 +211,7 @@ const Shop = () => {
           {product.product.map((item) => (
             <div key={item.category} className="bg-white shadow-lg rounded-lg p-4 transition-all transform hover:scale-105 hover:shadow-xl hover:translate-y-2">
               <Link to={`/product/${item.category}`}>
-                <img 
+                <img
                   src={item.image}
                   alt={item.name}
                   className="w-full h-48 object-cover rounded-t-lg"
