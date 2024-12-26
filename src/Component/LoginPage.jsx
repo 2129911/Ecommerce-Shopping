@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "../supabase/supabaseClient";
 import svg from "../assets/svg/svg.png";
+import video from '../assets/Video/bg2.mp4'
 
 const LoginPage = () => {
   const [user, setUser] = useState({ email: "", password: "" });
@@ -56,18 +57,25 @@ const LoginPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden grid grid-cols-1 md:grid-cols-2">
-        <div className="relative  md:block">
-          <img src={svg} alt="Illustration" className="w-full h-full object-cover" />
-        </div>
+    <>
+     <video 
+        className="absolute inset-0  z-0 w-full h-full object-cover" 
+        autoPlay 
+        loop 
+        muted
+      >
+        <source src={video} type="video/mp4" />
+      </video>
+    <div className="min-h-screen max-w-xl m-auto   flex items-center ">
+      <div className="w-full z-10  backdrop-blur-md   shadow-lg rounded-lg overflow-hidden">
+        
 
         {/* Form Section */}
-        <div className="w-full p-6">
+        <div className="w-full p-6 ">
           <div className="flex mb-6">
             <button
               onClick={toggleForm}
-              className={`w-1/2 py-2 text-center font-semibold transition-colors ${
+              className={`w-1/2 py-2 rounded-l-lg text-center font-semibold transition-colors ${
                 isLogin ? "bg-red-500 text-white" : "bg-gray-200 text-gray-700"
               }`}
             >
@@ -75,7 +83,7 @@ const LoginPage = () => {
             </button>
             <button
               onClick={toggleForm}
-              className={`w-1/2 py-2 text-center font-semibold transition-colors ${
+              className={`w-1/2 py-2 text-center rounded-r-lg font-semibold transition-colors ${
                 !isLogin ? "bg-red-500 text-white" : "bg-gray-200 text-gray-700"
               }`}
             >
@@ -83,7 +91,7 @@ const LoginPage = () => {
             </button>
           </div>
 
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+          <h2 className="text-2xl font-bold text-white  mb-4">
             {isLogin ? "Login" : "Register"}
           </h2>
 
@@ -130,6 +138,7 @@ const LoginPage = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

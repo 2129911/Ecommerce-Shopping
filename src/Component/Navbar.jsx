@@ -2,8 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaSearch, FaShoppingCart, FaUser, FaStore } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
+import { SlActionUndo } from "react-icons/sl";
+
 
 const Navbar = () => {
+  
   const product = useSelector(state=> state.cart.product)
   console.log(product)
   return (
@@ -11,18 +14,16 @@ const Navbar = () => {
       <nav className="bg-gray-900    shadow-md">
         
         <div className="container mx-auto px-4 md:px-16 lg:px-24 py-4 flex justify-between items-center">
-          {/* Logo Section */}
           <div className="flex items-center  space-x-2 text-lg font-bold">
             <FaStore className="text-red-500  text-2xl" />
             <Link
-              to="/"
+              to="/home"
               className="text-red-500 hover:text-red-700 transition duration-300"
             >
               E-Shop
             </Link>
           </div>
 
-          {/* Search Bar */}
           <div className="relative flex-1 mx-4">
             <form className="relative">
               <input
@@ -38,14 +39,21 @@ const Navbar = () => {
           <div className="flex items-center space-x-4">
           <Link to="/cart" className="relative">
   <FaShoppingCart className="text-lg text-white hover:text-red-500 transition duration-300" />
+
   {product.length > 0 && (
     <span className="absolute -top-3 -right-4 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
       {product.length}
     </span>
   )}
+  
 </Link>
 
           </div>
+          <Link className='flex justify-center items-center ' to={'/'}>
+          <SlActionUndo className="text-lg ml-5 mr-2   text-white hover:text-red-500 transition duration-300"  />
+        <p className='text-white'>Loge-Out</p>
+          </Link>
+          
         </div>
 
         {/* Links Section */}

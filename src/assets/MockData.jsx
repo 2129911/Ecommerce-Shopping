@@ -1,70 +1,70 @@
-import img1 from "../assets/Images/products/product1.jpg";
-import img2 from "../assets/Images/products/product2.jpg";
-import img3 from "../assets/Images/products/product3.jpg";
-import img4 from "../assets/Images/products/product4.jpg";
-import img5 from "../assets/Images/products/product5.jpg";
-import img6 from "../assets/Images/products/product6.jpg";
-import img7 from "../assets/Images/products/product7.png";
-import img8 from "../assets/Images/products/product8.jpg";
-import ele1 from "../../src/assets/Images/electronic device/ele1.jpg";
-import ele2 from "../../src/assets/Images/electronic device/ele2.png";
-import ele3 from "../../src/assets/Images/electronic device/ele3.png";
-import ele4 from "../../src/assets/Images/electronic device/ele4.jpg";
-import ele5 from "../../src/assets/Images/electronic device/ele5.png";
-import ele6 from "../../src/assets/Images/electronic device/ele6.jpg";
-import ele7 from "../../src/assets/Images/electronic device/ele7.png";
-import ele8 from "../../src/assets/Images/electronic device/ele8.png";
-import ele9 from "../../src/assets/Images/electronic device/ele9.png";
-import ele10 from "../../src/assets/Images/electronic device/ele10.jpg";
-import ele11 from "../../src/assets/Images/electronic device/ele11.png";
-import ele12 from "../../src/assets/Images/electronic device/ele12.jpg";
-import menfash from "../../src/assets/Images/fashionMain/menfash.jpg";
-import womfash from "../../src/assets/Images/fashionMain/women.jpg";
-import fash1 from "../../src/assets/Images/sports/1.jpg";
-import fash2 from "../../src/assets/Images/sports/2.jpg";
-import fash3 from "../../src/assets/Images/sports/3.jpg";
-import fash4 from "../../src/assets/Images/sports/4.jpg";
-import fash5 from "../../src/assets/Images/sports/5.jpg";
-import fash6 from "../../src/assets/Images/sports/6.jpg";
-import fash7 from "../../src/assets/Images/sports/7.jpg";
-import fash8 from "../../src/assets/Images/sports/8.jpg";
-import fash9 from "../../src/assets/Images/sports/9.jpg";
-import fash10 from "../../src/assets/Images/sports/10.jpg";
-import fash11 from "../../src/assets/Images/sports/11.jpg";
-import fash12 from "../../src/assets/Images/sports/12.jpg";
-import fash13 from "../../src/assets/Images/sports/13.jpg";
-import fash14 from "../../src/assets/Images/sports/14.jpg";
-import home1 from "../assets/Images/home/home1.png";
-import home2 from "../assets/Images/home/home2.jpg";
-import home3 from "../assets/Images/home/home3.jpg";
-import home4 from "../assets/Images/home/home4.jpg";
-import home5 from "../assets/Images/home/home5.jpg";
-import home6 from "../assets/Images/home/home6.jpg";
-import home7 from "../assets/Images/home/home7.jpg";
-import home8 from "../assets/Images/home/home8.jpg";
-import home9 from "../assets/Images/home/home9.jpg";
-import home10 from "../assets/Images/home/home10.jpg";
-import home11 from "../assets/Images/home/home11.jpg";
-import home12 from "../assets/Images/home/home12.jpg";
-import home13 from "../assets/Images/home/home13.jpg";
-import home14 from "../assets/Images/home/home14.png";
-import home15 from "../assets/Images/home/home15.png";
-import home16 from "../assets/Images/home/home16.png";
+import img1 from "../assets/Images/products/product1.webp";
+import img2 from "../assets/Images/products/product2.webp";
+import img3 from "../assets/Images/products/product3.webp";
+import img4 from "../assets/Images/products/product4.webp";
+import img5 from "../assets/Images/products/product5.webp";
+import img6 from "../assets/Images/products/product6.webp";
+import img7 from "../assets/Images/products/product7.webp";
+import img8 from "../assets/Images/products/product8.webp";
+import ele1 from "../../src/assets/Images/electronic device/ele1.webp";
+import ele2 from "../../src/assets/Images/electronic device/ele2.webp";
+import ele3 from "../../src/assets/Images/electronic device/ele3.webp";
+import ele4 from "../../src/assets/Images/electronic device/ele4.webp";
+import ele5 from "../../src/assets/Images/electronic device/ele5.webp";
+import ele6 from "../../src/assets/Images/electronic device/ele6.webp";
+import ele7 from "../../src/assets/Images/electronic device/ele7.webp";
+import ele8 from "../../src/assets/Images/electronic device/ele8.webp";
+import ele9 from "../../src/assets/Images/electronic device/ele9.webp";
+import ele10 from "../../src/assets/Images/electronic device/ele10.webp";
+import ele11 from "../../src/assets/Images/electronic device/ele11.webp";
+import ele12 from "../../src/assets/Images/electronic device/ele12.webp";
+import menfash from "../../src/assets/Images/fashionMain/menfash.webp";
+import womfash from "../../src/assets/Images/fashionMain/women.webp";
+import fash1 from "../../src/assets/Images/sports/1.webp";
+import fash2 from "../../src/assets/Images/sports/2.webp";
+import fash3 from "../../src/assets/Images/sports/3.webp";
+import fash4 from "../../src/assets/Images/sports/4.webp";
+import fash5 from "../../src/assets/Images/sports/5.webp";
+import fash6 from "../../src/assets/Images/sports/6.webp";
+import fash7 from "../../src/assets/Images/sports/7.webp";
+import fash8 from "../../src/assets/Images/sports/8.webp";
+import fash9 from "../../src/assets/Images/sports/9.webp";
+import fash10 from "../../src/assets/Images/sports/10.webp";
+import fash11 from "../../src/assets/Images/sports/11.webp";
+import fash12 from "../../src/assets/Images/sports/12.webp";
+import fash13 from "../../src/assets/Images/sports/13.webp";
+import fash14 from "../../src/assets/Images/sports/14.webp";
+import home1 from "../assets/Images/home/home1.webp";
+import home2 from "../assets/Images/home/home2.webp";
+import home3 from "../assets/Images/home/home3.webp";
+import home4 from "../assets/Images/home/home4.webp";
+import home5 from "../assets/Images/home/home5.webp";
+import home6 from "../assets/Images/home/home6.webp";
+import home7 from "../assets/Images/home/home7.webp";
+import home8 from "../assets/Images/home/home8.webp";
+import home9 from "../assets/Images/home/home9.webp";
+import home10 from "../assets/Images/home/home10.webp";
+import home11 from "../assets/Images/home/home11.webp";
+import home12 from "../assets/Images/home/home12.webp";
+import home13 from "../assets/Images/home/home13.webp";
+import home14 from "../assets/Images/home/home14.webp";
+import home15 from "../assets/Images/home/home15.webp";
+import home16 from "../assets/Images/home/home16.webp";
 
-import men1 from "./Images/fashionMain/menClothes/men1.jpg";
-import men2 from "./Images/fashionMain/menClothes/men2.jpg";
-import men3 from "./Images/fashionMain/menClothes/men3.jpg";
-import men4 from "./Images/fashionMain/menClothes/men4.jpg";
-import men5 from "./Images/fashionMain/menClothes/men5.jpg";
-import men6 from "./Images/fashionMain/menClothes/men6.jpg";
-import men7 from "./Images/fashionMain/menClothes/men7.jpg";
-import men8 from "./Images/fashionMain/menClothes/men8.jpg";
-import men9 from "./Images/fashionMain/menClothes/men9.jpg";
-import men10 from "./Images/fashionMain/menClothes/men10.jpg";
-import men11 from "./Images/fashionMain/menClothes/men11.jpg";
-import men12 from "./Images/fashionMain/menClothes/men12.jpg";
+import men1 from "./Images/fashionMain/menClothes/men1.webp";
+import men2 from "./Images/fashionMain/menClothes/men2.webp";
+import men3 from "./Images/fashionMain/menClothes/men3.webp";
+import men4 from "./Images/fashionMain/menClothes/men4.webp";
+import men5 from "./Images/fashionMain/menClothes/men5.webp";
+import men6 from "./Images/fashionMain/menClothes/men6.webp";
+import men7 from "./Images/fashionMain/menClothes/men7.webp";
+import men8 from "./Images/fashionMain/menClothes/men8.webp";
+import men9 from "./Images/fashionMain/menClothes/men9.webp";
+import men10 from "./Images/fashionMain/menClothes/men10.webp";
+import men11 from "./Images/fashionMain/menClothes/men11.webp";
+import men12 from "./Images/fashionMain/menClothes/men12.webp";
 
-import beau1 from "./Images/beauty/beau1.jpg";
+import beau1 from "../assets/Images/beauty/beau1.jpg";
 import beau2 from "./Images/beauty/beau2.webp";
 import beau3 from "./Images/beauty/beau3.webp";
 import beau4 from "./Images/beauty/beau4.webp";
@@ -81,19 +81,19 @@ import beau14 from "./Images/beauty/beau14.webp";
 import beau15 from "./Images/beauty/beau15.webp";
 import beau16 from "./Images/beauty/beau16.webp";
 
-import fem1 from "./Images/womenCollection/fem1.jpg";
+import fem1 from "./Images/womenCollection/fem1.webp";
 import fem2 from "./Images/womenCollection/fem2.webp";
 import fem3 from "./Images/womenCollection/fem3.webp";
 import fem4 from "./Images/womenCollection/fem4.webp";
-import fem5 from "./Images/womenCollection/fem5.jpg";
+import fem5 from "./Images/womenCollection/fem5.webp";
 import fem6 from "./Images/womenCollection/fem6.webp";
-import fem7 from "./Images/womenCollection/fem7.jpg";
-import fem8 from "./Images/womenCollection/fem8.avif";
+import fem7 from "./Images/womenCollection/fem7.webp";
+import fem8 from "./Images/womenCollection/fem8.webp";
 import fem9 from "./Images/womenCollection/fem9.webp";
-import fem10 from "./Images/womenCollection/fem10.jpeg";
-import fem11 from "./Images/womenCollection/fem11.jpeg";
-import fem12 from "./Images/womenCollection/fem12.jpeg";
-import fem13 from "./Images/womenCollection/fem13.jpeg";
+import fem10 from "./Images/womenCollection/fem10.webp";
+import fem11 from "./Images/womenCollection/fem11.webp";
+import fem12 from "./Images/womenCollection/fem12.webp";
+import fem13 from "./Images/womenCollection/fem13.webp";
 import fem14 from "./Images/womenCollection/fem14.webp";
 import fem15 from "./Images/womenCollection/fem15.webp";
 import fem16 from "./Images/womenCollection/fem16.webp";
@@ -684,7 +684,7 @@ export const mencollection = [
 export const beautyProducts = [
   {
     id: 1,
-    image: fem1,
+    image: beau1,
     category: "beau1",
     name: "Shopping Bag",
     description: "Latest and Branded Shopping Bag only on E-shop",
@@ -694,14 +694,14 @@ export const beautyProducts = [
     id: 2,
     category: "beau2",
 
-    image: fem2,
+    image: beau2,
     name: "Men Shirt",
     description: "Latest and Branded Shopping Shirt only on E-shop",
     price: 100,
   },
   {
     id: 3,
-    image: fem3,
+    image: beau3,
     category: "beau3",
 
     name: "Shoes",
@@ -710,7 +710,7 @@ export const beautyProducts = [
   },
   {
     id: 4,
-    image: fem4,
+    image: beau4,
     category: "beau4",
 
     name: "Glasses",
@@ -721,7 +721,7 @@ export const beautyProducts = [
     category: "beau5",
 
     id: 5,
-    image: fem5,
+    image: beau5,
     name: "Headphone",
     description: "Latest and Branded Headphone only on E-shop",
 
@@ -729,7 +729,7 @@ export const beautyProducts = [
   },
   {
     id: 6,
-    image: fem6,
+    image: beau6,
     category: "mens6",
 
     name: "Beyou Product",
@@ -739,14 +739,14 @@ export const beautyProducts = [
   {
     id: 7,
     category: "beau7",
-    image: fem7,
+    image: beau7,
     name: "Apple watch",
     description: "Latest and Branded Apple watch only on E-shop",
     price: 1000,
   },
   {
     id: 8,
-    image: fem8,
+    image: beau8,
     name: "Playstation 5-Pro",
     category: "beau8",
 
@@ -755,7 +755,7 @@ export const beautyProducts = [
   },
   {
     id: 9,
-    image: fem9,
+    image: beau9,
     name: "Beyou Product",
     description: "Latest and Branded Beyou only on E-shop",
     category: "beau9",
@@ -764,7 +764,7 @@ export const beautyProducts = [
   },
   {
     id: 10,
-    image: fem10,
+    image: beau10,
     name: "Apple watch",
     description: "Latest and Branded Apple watch only on E-shop",
     category: "beau10",
@@ -773,7 +773,7 @@ export const beautyProducts = [
   },
   {
     id: 11,
-    image: fem11,
+    image: beau11,
     name: "Playstation 5-Pro",
     category: "beau11",
 
@@ -782,7 +782,7 @@ export const beautyProducts = [
   },
   {
     id: 12,
-    image: fem12,
+    image: beau12,
     name: "Playstation 5-Pro",
     description: "Latest Platstation 5-pro only on E-shop",
     category: "beau12",
@@ -791,7 +791,7 @@ export const beautyProducts = [
   },
   {
     id: 13,
-    image: fem13,
+    image: beau13,
     name: "Playstation 5-Pro",
     description: "Latest Platstation 5-pro only on E-shop",
     category: "beau13",
@@ -800,7 +800,7 @@ export const beautyProducts = [
   },
   {
     id: 14,
-    image: fem14,
+    image: beau14,
     name: "Playstation 5-Pro",
     category: "beau14",
 
@@ -809,7 +809,7 @@ export const beautyProducts = [
   },
   {
     id: 15,
-    image: fem15,
+    image: beau15,
     name: "Playstation 5-Pro",
     description: "Latest Platstation 5-pro only on E-shop",
     price: 900,
@@ -817,7 +817,7 @@ export const beautyProducts = [
   },
   {
     id: 16,
-    image: fem16,
+    image: beau16,
     name: "Playstation 5-Pro",
     description: "Latest Platstation 5-pro only on E-shop",
     category: "beau16",

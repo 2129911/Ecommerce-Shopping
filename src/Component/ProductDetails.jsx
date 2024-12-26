@@ -40,12 +40,15 @@ const ProductDetails = () => {
   return (
     <div
     style={{ backgroundImage: `url(${product.image})` }}
-    className="min-h-screen  bg-cover bg-center opacity-100 z-0  flex justify-center items-center  p-4"
-  >      <motion.div
-        className="max-w-5xl w-full bg-white rounded-lg shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-2 gap-4"
+    className="min-h-screen  bg-cover  bg-center opacity-100 z-0   flex justify-center items-center  p-4"
+  >     
+  <div className="opacity-100">
+   <motion.div
+        className="max-w-5xl  w-full bg-white rounded-lg shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-2 gap-4"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
+        
       >
         <motion.img
           src={product.image}
@@ -56,7 +59,7 @@ const ProductDetails = () => {
           transition={{ duration: 0.8 }}
         />
 
-        <div className="p-6 flex flex-col justify-between">
+        <div className="p-6 flex  flex-col justify-between">
           <div>
             <h1 className="text-4xl font-bold text-gray-800 mb-4">{product.name}</h1>
             <p className="text-gray-600 mb-4">{product.description}</p>
@@ -67,7 +70,7 @@ const ProductDetails = () => {
             <div className="flex items-center justify-center mb-6 space-x-2">
               <button
                 onClick={() => dispatch(decreaseQuantity(product.id))}
-                className="bg-gray-200 px-4 py-2 rounded-l hover:bg-gray-300"
+                className="bg-gray-200 px-4 py-2 rounded-l round hover:bg-gray-300"
               >
                 -
               </button>
@@ -86,7 +89,7 @@ const ProductDetails = () => {
                 dispatch(addToCart(product));
                 alert(`${product.name} added to cart successfully!`);
               }}
-              className="w-full bg-red-600 text-white py-2 rounded hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-300"
+              className="w-full rounded-full bg-red-600 text-white py-2  hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -95,12 +98,13 @@ const ProductDetails = () => {
           </div>
 
           <button onClick={() => navigate(-1)} className="mt-4">
-            <div className="w-full bg-gray-800 text-white py-2 flex items-center justify-center rounded hover:bg-gray-900">
+            <div className="w-full bg-gray-800 text-white py-2 flex items-center justify-center rounded-full hover:bg-gray-900">
               <GoArrowLeft className="mr-2" /> Go Back
             </div>
           </button>
         </div>
       </motion.div>
+      </div>
     </div>
   );
 };
