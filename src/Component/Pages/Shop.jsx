@@ -132,7 +132,7 @@ const Shop = () => {
           {product.product.map((item) => (
             <div key={item.category} className="bg-white shadow-lg rounded-lg p-4 transition-all transform hover:scale-105 hover:shadow-xl hover:translate-y-2">
               <Link to={`/product/${item.category}`}>
-                <img loading="lazy"
+                <img 
                   src={item.image}
                   alt={item.name}
                   className="w-full h-48 object-cover rounded-t-lg"
