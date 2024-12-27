@@ -71,7 +71,7 @@ const Cart = () => {
   return (
     <div className="min-h-screen py-8 px-4 md:px-8 bg-white">
       {loading ? (
-        <p className="text-center text-xl text-gray-600">Loading...</p>
+        <p className="text-center text-xl text-gray-600 loader"></p>
       ) : error ? (
         <p className="text-center text-xl text-red-600">Error: {error}</p>
       ) : cartProducts.length > 0 ? (

@@ -31,7 +31,7 @@ const ProductDetails = () => {
           </div>
         </button>
         <div className="flex justify-center items-center h-screen">
-          <div className="loader text-2xl font-semibold">Loading...</div>
+          <span className=" text-2xl font-semibold loadar"></span>
         </div>
       </>
     );

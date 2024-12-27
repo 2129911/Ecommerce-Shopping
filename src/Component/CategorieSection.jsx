@@ -25,7 +25,7 @@ const CategorieSection = () => {
   ];
 
   return (
-    <div className="py-10 px-4">
+    <div className="py-10 px-4 block" >
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-9">
         {Categories.map((item, index) => (
           <div key={index} className="group relative max-w-sm mx-auto bg-white shadow-xl rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105">

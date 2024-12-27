@@ -426,6 +426,22 @@ export const fashion = [
     name: "Playstation 5-Pro",
     description: "Latest Platstation 5-pro only on E-shop",
     price: 900,
+  },{
+    id: 13,
+    category: "fashs12",
+
+    image: fash12,
+    name: "Playstation 5-Pro",
+    description: "Latest Platstation 5-pro only on E-shop",
+    price: 900,
+  },{
+    id: 12,
+    category: "fashs12",
+
+    image: fash14,
+    name: "Playstation 5-Pro",
+    description: "Latest Platstation 5-pro only on E-shop",
+    price: 900,
   },
 ];
 
@@ -442,7 +458,6 @@ export const womencollection = [
   {
     id: 2,
     category: "wom2",
-
     image: fem2,
     name: "Men Shirt",
     description: "Latest and Branded Shopping Shirt only on E-shop",
@@ -451,7 +466,6 @@ export const womencollection = [
   {
     id: 3,
     category: "wom3",
-
     image: fem3,
     name: "Shoes",
     description: "Latest and Branded Shoes only on E-shop",
@@ -479,7 +493,6 @@ export const womencollection = [
     id: 6,
     image: fem6,
     category: "wom6",
-
     name: "Beyou Product",
     description: "Latest and Branded Beyou only on E-shop",
     price: 500,

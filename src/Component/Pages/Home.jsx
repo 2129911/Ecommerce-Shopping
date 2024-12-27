@@ -56,7 +56,7 @@ const Home = () => {
 
         {/* Hero Section */}
 
-        <div className="flex-1 relative rounded-lg shadow-lg overflow-hidden">
+        <div className="flex-1  relative rounded-lg shadow-lg overflow-hidden">
           <video
             className="absolute inset-0 w-full h-full object-cover"
             autoPlay
@@ -94,7 +94,7 @@ const Home = () => {
       <Chatbox />
       {/* Product Section */}
 
-      <div className="mt-10">
+      <div className="mt-10 block">
         <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">
           Featured Products
         </h1>
