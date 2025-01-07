@@ -1,12 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { FaSearch, FaShoppingCart, FaUser, FaStore } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
+// import { SlActionUndo } from "react-icons/sl";
+import { supabase } from '../supabase/supabaseClient';
+import { Auth } from '@supabase/auth-ui-react';
 import { SlActionUndo } from "react-icons/sl";
+import { ImUserTie } from "react-icons/im";
 
 
 const Navbar = () => {
-  
+  let navigate = useNavigate()
+ async function signoutUser() {
+    
+    const {error}=await supabase.auth.signOut()
+    navigate("/")
+  }
   const product = useSelector(state=> state.cart.product)
   console.log(product)
   return (
@@ -49,10 +58,12 @@ const Navbar = () => {
 </Link>
 
           </div>
-          <Link className='flex justify-center items-center ' to={'/'}>
-          <SlActionUndo className="text-lg ml-5 mr-2   text-white hover:text-red-500 transition duration-300"  />
-        <p className='text-white'>Loge-Out</p>
+          <Link to="/admin">
+          <ImUserTie className='ml-5 text-xl text-white hover:text-red-500  transition duration-300' />
           </Link>
+          <button onClick={signoutUser}>
+          <SlActionUndo className='ml-5 text-xl text-white hover:text-red-500  transition duration-300' />
+          </button>
           
         </div>
 

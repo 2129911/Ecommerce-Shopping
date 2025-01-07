@@ -1,8 +1,8 @@
 import React from 'react';
-import kid from '../assets/Images/kids.png';
-import men from '../assets/Images/men.png';
-import women from '../assets/Images/women.png';
-import baby from '../assets/Images/baby.png';
+import kid from '../assets/Images/kid.webp';
+import baby from '../assets/Images/bab.webp';
+import women from '../assets/Images/wome.webp';
+import men from '../assets/Images/me.webp';
 
 const CategorieSection = () => {
   const Categories = [

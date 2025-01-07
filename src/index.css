@@ -11,6 +11,8 @@
     transform: translateY(0);
   }
 }
+
+ 
 .animate-fadeIn {
   animation: fadeIn 1s ease-in-out;
 }
@@ -84,7 +86,7 @@ position: fixed;
 .loader::after {    
   content:"";
   grid-area: 1/1;
-  --c:no-repeat radial-gradient(farthest-side,#25b0a7 92%,#0000);
+  --c:no-repeat radial-gradient(farthest-side,#b02525 92%,#0000);
   background: 
     var(--c) 50%  0, 
     var(--c) 50%  100%, 

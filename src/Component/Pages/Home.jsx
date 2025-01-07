@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Categories, mockData } from "../../assets/MockData";
 import Heroimage from "../../assets/Images/Hero-Image.png";
-import InfoSection from "../InfoSection";
+const InfoSection = React.lazy(()=>import("../InfoSection"));
 import CategorieSection from "../CategorieSection";
 import { setProduct } from "../redux/productSlice";
 import { useSelector, useDispatch } from "react-redux";
@@ -9,6 +9,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { addToCart } from "../redux/cartProduct";
 import video from "../../assets/Video/one.mp4";
 import Chatbox from "../../Chatbox/Chatbox";
+import { Suspense } from "react";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -30,7 +31,7 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-white  mt-2 mx-auto px-4 md:px-16 lg:px-24">
+    <div className=" mx-auto px-4 md:px-16 lg:px-24">
       {/* Main Container */}
       <div className="container mx-auto py-8 flex flex-col md:flex-row gap-6">
         {/* Categories Section */}
@@ -88,8 +89,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-
+<Suspense fallback={<div className="loader"></div>}>
       <InfoSection />
+      </Suspense>
       <CategorieSection />
       <Chatbox />
       {/* Product Section */}
@@ -101,6 +103,30 @@ const Home = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {product.product.slice(0, 4).map((item, index) => (
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <Link to={`/product/${item.category}`}>
               <div
                 key={index}
@@ -134,16 +160,24 @@ const Home = () => {
         </div>
 
         {/* View All Button */}
-        <div className="flex justify-center mt-6">
-          <button
-            onClick={() => navigate("/shop")}
-            className="bg-red-600 text-white px-6 py-2 mb-3 rounded-lg shadow-md hover:bg-red-700 transition"
-          >
-            View All
-          </button>
+        <div class="container max-w-full">
+    <div class=" flex flex-wrap content-center justify-evenly">
+        <div class="relative inline-flex group">
+            <div
+                className="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
+            </div>
+            <button
+                className="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-red-400 font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 rounded-xl"
+                >View All</button>
         </div>
-      </div>
     </div>
+</div>
+
+    
+</div>
+        </div>
+      
+    
   );
 };
 

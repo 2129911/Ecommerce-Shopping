@@ -13,14 +13,14 @@ import {
 const ProductDetails = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { category } = useParams();
+  const { id } = useParams();
   const cart = useSelector((state) => state.product.product);
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    const selectedProduct = cart.find((product) => product.category === category);
+    const selectedProduct = cart.find((product) => product.id === id);
     setProduct(selectedProduct);
-  }, [category, cart]);
+  }, [id, cart]);
 
   if (!product) {
     return (
@@ -51,7 +51,7 @@ const ProductDetails = () => {
         
       >
         <motion.img
-          src={product.image}
+          src={product.images}
           alt={product.name}
           className="w-full h-96 object-cover rounded-t-lg md:rounded-none md:rounded-l-lg"
           initial={{ opacity: 0 }}

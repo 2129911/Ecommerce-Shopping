@@ -19,6 +19,8 @@ import CreditCardPayment from "./Component/CreditCardPayment";
 import OrderSummary from "./Component/OrderSummary";
 import LoginPage from "./Component/LoginPage";
 import ProductDetails from "./Component/ProductDetails";
+import AdminPage from "./Component/Pages/AdminPage";
+import Success from "./Component/Success";
 
 const Layout = ({ children }) => {
   const isLoginPage = useLocation().pathname === "/";
@@ -38,6 +40,8 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<LoginPage />} />
+          <Route path="/admin" element={<AdminPage />} />
+          <Route path="/success" element={<Success />} />
 
           <Route path="/home" element={<Home />} />
           <Route path="/electronics" element={<Electronics />} />
@@ -45,6 +49,7 @@ function App() {
           <Route path="/sports" element={<Sport />} />
           <Route path="/homekitchen" element={<HomeKitchen />} />
           <Route path="/cart" element={<Cart />} />
+
           <Route path="/mencollection" element={<MenCollections />} />
           <Route path="/womencollection" element={<WomenCollection />} />
           <Route path="/product/:category" element={<ProductDetails />} />

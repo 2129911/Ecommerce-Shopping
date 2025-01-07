@@ -64,7 +64,7 @@ import men10 from "./Images/fashionMain/menClothes/men10.webp";
 import men11 from "./Images/fashionMain/menClothes/men11.webp";
 import men12 from "./Images/fashionMain/menClothes/men12.webp";
 
-import beau1 from "../assets/Images/beauty/beau1.jpg";
+import beau1 from "../assets/Images/beauty/beau1.webp";
 import beau2 from "./Images/beauty/beau2.webp";
 import beau3 from "./Images/beauty/beau3.webp";
 import beau4 from "./Images/beauty/beau4.webp";
@@ -963,7 +963,7 @@ export const homekitchen = [
 
     image: home14,
     name: "Playstation 5-Pro",
-    description: "Latest Platstation 5-pro only on E-shop",
+    description: "https://wtzfubwxajeavkghhifq.supabase.co/storage/v1/object/public/product-image/home3.webphttps://wtzfubwxajeavkghhifq.supabase.co/storage/v1/object/public/product-image/home3.webp",
     price: 900,
   },
   {
