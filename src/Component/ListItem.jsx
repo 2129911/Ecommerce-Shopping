@@ -1,13 +1,9 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import "tailwindcss/tailwind.css";
-import AddItem from "./AddItem"
 import { BsArrowRight } from "react-icons/bs";
-import ListItem from "../ListItem";
-// import Orders from "../Orders";
-import Items from "../Items"
-
-const AdminPage = () => {
+import Items from "./Items"
+const ListItem = () => {
   return (
     <div className="flex bg-gray-100 min-h-screen">
       {/* Sidebar */}
@@ -43,10 +39,11 @@ const AdminPage = () => {
         <AddItem/> 
         {/* <Orders/>  
         <ListItem/>   */}
+        <Items></Items>
 
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AdminPage;
+export default ListItem

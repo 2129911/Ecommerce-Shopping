@@ -21,6 +21,11 @@ import LoginPage from "./Component/LoginPage";
 import ProductDetails from "./Component/ProductDetails";
 import AdminPage from "./Component/Pages/AdminPage";
 import Success from "./Component/Success";
+import Orders from "./Component/Pages/Orders";
+
+import AddItem from "./Component/Pages/AddItem";
+import ListItem from "./Component/ListItem";
+import Items from "./Component/Items";
 
 const Layout = ({ children }) => {
   const isLoginPage = useLocation().pathname === "/";
@@ -42,6 +47,14 @@ function App() {
           <Route path="/" element={<LoginPage />} />
           <Route path="/admin" element={<AdminPage />} />
           <Route path="/success" element={<Success />} />
+          <Route path="/items" element={<Items />} />
+
+
+          {/* <Route path="/" element={<AdminPage />}> */}
+          <Route path="add-item" element={<AddItem />} />
+          <Route path="list-item" element={<ListItem />} />
+          <Route path="orders" element={<Orders />} />
+
 
           <Route path="/home" element={<Home />} />
           <Route path="/electronics" element={<Electronics />} />
