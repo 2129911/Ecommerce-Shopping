@@ -5,7 +5,7 @@ import Stripe from 'stripe';
 const app = express();
 
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "https://backend-puce-eta-67.vercel.app/",
   methods: "GET,POST",
   allowedHeaders: "Content-Type,Authorization",
 };
