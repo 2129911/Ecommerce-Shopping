@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { supabase } from "../../supabase/supabaseClient";
+import { Link, Outlet } from "react-router-dom";
+import { BsArrowRight } from "react-icons/bs";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
 
-  // Fetch data from Supabase
   const fetchData = async () => {
     try {
       const { data, error } = await supabase.from("Payment_Orders").select("*");
@@ -12,7 +13,7 @@ const Orders = () => {
         console.error(error);
         return;
       }
-      setOrders(data); // Update orders state with fetched data
+      setOrders(data); 
     } catch (err) {
       console.error("Error fetching data:", err.message);
     }
@@ -20,12 +21,37 @@ const Orders = () => {
 
   return (
     <div className="border m-10">
-      <button
+       <div className="w-1/4 bg-white p-4 shadow-lg">
+        <div className="flex flex-col gap-4">
+          <Link
+            to="/admin"
+            className="flex items-center gap-4 border rounded p-2 hover:bg-gray-200"
+          >
+            <p className="text-xl">Add Item</p>
+            <BsArrowRight className="text-2xl" />
+          </Link>
+          <Link
+            to="/items"
+            className="flex items-center gap-4 border rounded p-2 hover:bg-gray-200"
+          >
+            <p className="text-xl">List Item</p>
+            <BsArrowRight className="text-2xl" />
+          </Link>
+          <Link
+            to="/orders" onClick={fetchData}
+            className="flex items-center gap-4 border rounded p-2 hover:bg-gray-200"
+          >
+            <p className="text-xl">Orders</p>
+            <BsArrowRight className="text-2xl" />
+          </Link>
+        </div>
+      </div>
+      {/* <button
         onClick={fetchData}
         className="bg-blue-500 text-white px-4 py-2 rounded mb-4 hover:bg-blue-600"
       >
         Fetch Orders
-      </button>
+      </button> */}
 
       {orders.length > 0 && (
         <div className="mt-6 overflow-x-auto">

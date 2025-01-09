@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from "../../public/vite.svg"
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { FaSearch, FaShoppingCart, FaUser, FaStore } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
@@ -22,7 +21,6 @@ const Navbar = () => {
   return (
     <>
       <nav className="bg-gray-900    shadow-md">
-        <img src={logo} className='bg-white CUSTOM_LOGO' alt="" srcset="" />
         <div className="container mx-auto px-4 md:px-16 lg:px-24 py-4 flex justify-between items-center">
           <div className="flex items-center  space-x-2 text-lg font-bold">
             <FaStore className="text-red-500  text-2xl" />

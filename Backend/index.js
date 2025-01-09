@@ -26,7 +26,7 @@ app.post("/api/makepayment", async (req, res) => {
         product_data: {
           name: item.name,
         },
-        unit_amount: Math.round(item.price * 100), // Price in cents
+        unit_amount: Math.round(item.price * 100), 
       },
       quantity: item.quantity,
     }))

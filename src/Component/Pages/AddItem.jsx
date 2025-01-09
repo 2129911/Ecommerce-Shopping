@@ -82,10 +82,6 @@ const AdminPage = () => {
 
   return (
     <div className="bg-gray-100 min-h-screen mt-8 p-8">
-
-
-
-
       <motion.h1 
         className="text-4xl font-bold text-center mb-8 text-gray-800"
         initial={{ opacity: 0, y: -50 }}
