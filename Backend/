@@ -1,0 +1,162 @@
+[33mcommit b52921ad6cbf840f42228bc4e3b612a151cf0677[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Thu Jan 9 15:55:44 2025 +0530
+
+    data add
+
+[33mcommit a49770aa3784450e39ac9a5732ef748ebdf54039[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Thu Jan 9 15:36:32 2025 +0530
+
+    add cors backend
+
+[33mcommit 374fb63858c31fdd1ad2d02ec7c374275045df17[m
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Thu Jan 9 11:50:08 2025 +0530
+
+    add cors filss
+
+[33mcommit 1f6380a77ae3aec486d006b126e66c2708e18078[m
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Thu Jan 9 11:13:01 2025 +0530
+
+    add cors filss
+
+[33mcommit 6560c3f20a339cbfa30e091873d2f3235daa55f5[m
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Wed Jan 8 17:40:46 2025 +0530
+
+    add cors file
+
+[33mcommit 859020822b0d522a2aa22f97661e1cebc8b48123[m
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Wed Jan 8 17:35:59 2025 +0530
+
+    add nodejss
+
+[33mcommit c676fde8c552ac79b57419b8f89ac2d0726b2108[m
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Wed Jan 8 17:34:27 2025 +0530
+
+    add nodejs
+
+[33mcommit 0e85f50a9f63edf3f880389fbb5adf926b68caef[m
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Wed Jan 8 12:14:20 2025 +0530
+
+    add payment done
+
+[33mcommit cb22524b2d826660ebbd6330cad35e9a3a6979a9[m
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Tue Jan 7 12:11:32 2025 +0530
+
+    add payment gateway
+
+[33mcommit e613e701c2676be2a68fdd9920a48abd41249ee5[m
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Fri Dec 27 12:38:35 2024 +0530
+
+    add new animation and transition
+
+[33mcommit b820fe133514268730b7fca4e03d7e70944d2bf5[m
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Thu Dec 26 15:39:53 2024 +0530
+
+    shop edit remove the lazy loading
+
+[33mcommit a15c55a5c3731017297dc393b34b8efe02af3082[m
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Thu Dec 26 15:31:36 2024 +0530
+
+    shop edit remove the lazy loading
+
+[33mcommit 97f61c7d47f060518b432104bc7fdfc893e51260[m
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Thu Dec 26 15:28:00 2024 +0530
+
+    cart responsive
+
+[33mcommit bd3f52dba69bb5968ff556ea48a2bbb9111d9754[m
+Merge: cb9309d d2829f0
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Thu Dec 26 15:14:17 2024 +0530
+
+    Merge branch 'master' of https://github.com/2129911/Ecommerce-Shopping
+
+[33mcommit cb9309dc87d8af13f74e8f3b43486cb9538eebbe[m
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Thu Dec 26 15:11:33 2024 +0530
+
+    add updation cart and shop component
+
+[33mcommit d2829f0ad631ab30362eb81e7b52dc7ec19ceec0[m
+Author: Deepanshu <138648185+2129911@users.noreply.github.com>
+Date:   Wed Dec 18 17:36:28 2024 +0530
+
+    Update README.md
+
+[33mcommit 3fd190af4f0c74a945c51504409144663b9dc4b7[m
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Wed Dec 18 17:21:02 2024 +0530
+
+    add item in supabase
+
+[33mcommit a926dcab4e13b9d74ab423905bfef15cefa45456[m
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Wed Dec 18 11:31:31 2024 +0530
+
+    updation and responsive productDetails
+
+[33mcommit a476bf0c1b0b8c9bb225a61a29cc91c028efe4c9[m
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Wed Dec 18 11:22:36 2024 +0530
+
+    new add all data
+
+[33mcommit d6325df15d5684607aab21c8760d861eb2aa8d35[m
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Wed Dec 11 17:09:00 2024 +0530
+
+    add new cart option
+
+[33mcommit 64a79f7d36f1aa8cb594b40d4daa9e4b3247d25f[m
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Tue Dec 10 13:05:16 2024 +0530
+
+    Update video  Ecommerce-Shopings
+
+[33mcommit 70537412a42d246f88f935e3191037ad41b5451c[m
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Tue Dec 10 12:53:37 2024 +0530
+
+    Update add play video for iphones  Ecommerce-Shoping
+
+[33mcommit 1280d8ab177d6806614ebf1b855b0434d03cf0dd[m
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Tue Dec 10 12:50:09 2024 +0530
+
+    Update add play video for iphone  Ecommerce-Shoping
+
+[33mcommit 914147a724ecc3b9e6cfbb57ec681c7b85994a24[m
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Tue Dec 10 12:31:28 2024 +0530
+
+    Update add play video  Ecommerce-Shoping
+
+[33mcommit 1c4d79cc4071069010a5b049b063b8fe6a75a849[m
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Tue Dec 10 12:17:39 2024 +0530
+
+    Update video  Ecommerce-Shoping
+
+[33mcommit 5b6cbbde3772bb6545c93df80717a33b0c8fdd64[m
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Tue Dec 10 12:13:32 2024 +0530
+
+    Update Ecommerce-Shoping
+
+[33mcommit 8d4091896562a70289108fcc5332192432f7eafc[m
+Author: Deepanshu <deepanshu4788@gmail.com>
+Date:   Tue Dec 10 10:52:13 2024 +0530
+
+    Ecommerce-Shoping
