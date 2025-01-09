@@ -93,7 +93,7 @@
 
 
 
-    const response = await fetch("http://localhost:8080/api/makepayment", {
+    const response = await fetch("http://localhost:8080", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(cartProducts.map(cart => ({ products: cart.products }))),
@@ -120,38 +120,6 @@
       0
     );
   console.log(cartProducts)
-
-    const handleIncrease = async (id, currentQuantity) => {
-      setLoading(true);
-      const { data, error } = await supabase
-        .from('cart_products')
-        .update({ quantity: currentQuantity + 1 })
-        .eq('id', id);
-      if (error) {
-        console.error('Error increasing quantity:', error);
-      } else {
-        fetchCartProducts(); 
-      }
-      setLoading(false);
-    };
-  
-    const handleDecrease = async (id, currentQuantity) => {
-      if (currentQuantity > 1) {
-        setLoading(true);
-        const { data, error } = await supabase
-          .from('cart_products')
-          .update({ quantity: currentQuantity - 1 })
-          .eq('id', id);
-        if (error) {
-          console.error('Error decreasing quantity:', error);
-        } else {
-          fetchCartProducts(); 
-        }
-        setLoading(false);
-      } else {
-        console.error('Quantity cannot be less than 1');
-      }
-    };
     return (
       <div className="min-h-screen py-8 px-4 md:px-8 bg-white">
         {loading ? (
@@ -190,14 +158,14 @@
                     <p className="text-center text-gray-600 hidden md:block">${item.price}</p>
                     <div className="flex items-center justify-center space-x-2">
                       <button
-                        onClick={() => dispatch(handleDecrease(item.id,item.quantity))}
+                        onClick={() => dispatch(decreaseQuantity(item.id))}
                         className="bg-gray-200 px-2 md:px-3 py-1 rounded-l-lg hover:bg-gray-300"
                       >
                         -
                       </button>
                       <p className="px-3 md:px-4 py-1 bg-gray-100 rounded">{item.quantity}</p>
                       <button
-                        onClick={() => dispatch(handleIncrease(item.id,item.quantity))}
+                        onClick={() => dispatch(increaseQuantity(item.id))}
                         className="bg-gray-200 px-2 md:px-3 py-1 rounded-r-lg hover:bg-gray-300"
                       >
                         +
