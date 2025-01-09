@@ -93,7 +93,7 @@
 
 
 
-    const response = await fetch("http://localhost:8080/", {
+    const response = await fetch("https://backend-puce-eta-67.vercel.app/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(cartProducts.map(cart => ({ products: cart.products }))),
