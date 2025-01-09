@@ -26,6 +26,7 @@ import Orders from "./Component/Pages/Orders";
 import AddItem from "./Component/Pages/AddItem";
 import ListItem from "./Component/ListItem";
 import Items from "./Component/Items";
+import Cancel from "./Component/Cancel";
 
 const Layout = ({ children }) => {
   const isLoginPage = useLocation().pathname === "/";
@@ -48,6 +49,7 @@ function App() {
           <Route path="/admin" element={<AdminPage />} />
           <Route path="/success" element={<Success />} />
           <Route path="/items" element={<Items />} />
+          <Route path="/cancel" element={<Cancel />} />
 
 
           {/* <Route path="/" element={<AdminPage />}> */}
