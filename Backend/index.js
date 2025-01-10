@@ -5,7 +5,7 @@ import Stripe from 'stripe';
 const app = express();
 
 const corsOptions = {
-  origin: "https://your-frontend.vercel.app", 
+  origin: "https://ecommerce-shopping-iota.vercel.app", 
   methods: "GET,POST",
   allowedHeaders: "Content-Type,Authorization",
 };
@@ -41,10 +41,9 @@ app.post("/makepayment", async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     line_items: lineItems,
     mode: "payment",
-    success_url: "https://your-frontend.vercel.app/success", 
-    cancel_url: "https://your-frontend.vercel.app/cancel",
+    success_url: "http://localhost:5173/success",
+    cancel_url: "http://localhost:5173/cancel",
   });
-  
 
   res.status(200).json({ id: session?.id });
 });
