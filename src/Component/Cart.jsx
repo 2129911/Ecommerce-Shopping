@@ -93,7 +93,7 @@
 
 
 
-    const response = await fetch("https://ecommerce-shopping-iota.vercel.app/", { 
+    const response = await fetch("https://ecommerce-shopping-iota.vercel.app", { 
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(cartProducts.map(cart => ({ products: cart.products }))),
