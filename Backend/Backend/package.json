@@ -9,7 +9,6 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "start": "nodemon index.js"
-
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.4.0",
