@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 app.post("/makepayment", async (req, res) => {
   try {
     const product = req?.body;
-
+console.log(product)
     if (!product || !product.length) {
       return res.status(400).json({ error: "Invalid product data." });
     }
