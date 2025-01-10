@@ -5,7 +5,7 @@ import Stripe from 'stripe';
 const app = express();
 
 const corsOptions = {
-  origin: "ecommerce-shopping-wl9t.vercel.app", 
+  origin: "https://ecommerce-shopping-wojw.vercel.app/", 
   methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
 };
