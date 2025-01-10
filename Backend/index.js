@@ -19,6 +19,7 @@ app.use(express.json());
 // Add this GET route for the root path
 app.get("/", (req, res) => {
   res.send("Welcome to the Stripe Payment Server!");
+  console.log(req)
 });
 
 app.post("/makepayment", async (req, res) => {
