@@ -92,12 +92,46 @@
 
 
 
-
-    const response = await fetch("https://ecommerce-shopping-iota.vercel.app", { 
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(cartProducts.map(cart => ({ products: cart.products }))),
-    });
+    const makePayment = async () => {
+      const stripe = await loadStripe("pk_test_51QbzA3H4xuw4fMr9hUDLbTX9OY0BkYuHc5t1ofTjLZLMWMKMOTpW2RDpF9kbgOUIcatDyYhF5rNgawlzzyI6Usog009o8Vntnr");
+    
+      // Create the payload
+      const payload = cartProducts.map(cart => ({
+        products: cart.products.map(item => ({
+          name: item.name,
+          price: item.price,
+          quantity: item.quantity,
+        })),
+      }));
+    
+      try {
+        // Make the POST request to the server
+        const response = await fetch("https://ecommerce-shopping-iota.vercel.app/makepayment", { 
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+    
+        // Check for errors in response
+        if (!response.ok) {
+          console.error("Error during payment request:", response.status, response.statusText);
+          return;
+        }
+    
+        // Parse the response JSON
+        const session = await response.json();
+    
+        // Redirect to Stripe Checkout
+        stripe.redirectToCheckout({
+          sessionId: session?.id,
+        });
+      } catch (error) {
+        console.error("Error during makePayment:", error);
+      }
+    };
+    
+    
+    
     
     const session = await response.json()
     console.log("session", session)
