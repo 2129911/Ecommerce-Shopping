@@ -93,7 +93,7 @@
 
 
 
-    const response = await fetch("http://localhost:8080/makepayment", {
+    const response = await fetch("https://your-backend.vercel.app/makepayment", { 
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(cartProducts.map(cart => ({ products: cart.products }))),
