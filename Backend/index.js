@@ -5,10 +5,11 @@ import Stripe from 'stripe';
 const app = express();
 
 const corsOptions = {
-  origin: "*",
+  origin: "https://your-frontend.vercel.app", 
   methods: "GET,POST",
   allowedHeaders: "Content-Type,Authorization",
 };
+
 
 app.use(cors(corsOptions));
 app.use(express.json());
@@ -18,7 +19,7 @@ app.get("/", (req, res) => {
   res.send("Welcome to the Stripe Payment Server!");
 });
 
-app.post("/", async (req, res) => {
+app.post("/makepayment", async (req, res) => {
   const product = req?.body;
   console.log("product", product);
 
@@ -40,9 +41,10 @@ app.post("/", async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     line_items: lineItems,
     mode: "payment",
-    success_url: "http://localhost:5173/success",
-    cancel_url: "http://localhost:5173/cancel",
+    success_url: "https://your-frontend.vercel.app/success", 
+    cancel_url: "https://your-frontend.vercel.app/cancel",
   });
+  
 
   res.status(200).json({ id: session?.id });
 });
