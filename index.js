@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
   res.send("Welcome to the Stripe Payment Server!");
 });
 
-app.post("/", async (req, res) => {
+app.post("/makepayment", async (req, res) => {
   const product = req?.body;
   console.log("product", product);
 
