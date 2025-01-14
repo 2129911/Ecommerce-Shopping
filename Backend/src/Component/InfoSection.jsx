@@ -75,10 +75,13 @@ const InfoSection = () => {
     },
   ];
 
-  return (
-    <div className="z py-16">
+  return (<>
+   
+   <div className="z py-16">
+   
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 px-4">
         {infoItems.map((item, index) => (
+          
           <div
             key={index}
             className="relative flex flex-col items-center text-center p-6 bg-white border rounded-lg shadow-lg  transition-all duration-300 ease-in-out"
@@ -88,7 +91,7 @@ const InfoSection = () => {
               transform: `perspective(1000px) rotateX(${rotates[index].x}deg) rotateY(${rotates[index].y}deg) scale3d(1, 1, 1)`,
               transition: "all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99)",
             }}
-          >
+          > 
             <div className="pulse absolute -inset-2  rounded-lg " />
             <div className="relative z-10">
               <div className="text-4xl text-red-600 mb-4">{item.icon}</div>
@@ -101,6 +104,7 @@ const InfoSection = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 
